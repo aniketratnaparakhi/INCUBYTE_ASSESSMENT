@@ -54,6 +54,7 @@ def choice():
         conn.executemany("""INSERT OR IGNORE INTO HOSPITAL (NAME,ID,OPEN_DATE,LAST_CONSULT,VACCINATION_TYPE,DOCTOR_NAME,STATE,COUNTRY,POST_CODE,DOB,ACTIVE_CUSTOMER) \
               VALUES (:1,:2,:3,:4,:5,:6,:7,:8,:9,:10,:11 )""", Data)
         # insert()
+        conn.commit(
 
 
 def show():
@@ -64,7 +65,7 @@ def show():
             "|",row[6],"\t\t","|",row[7],"\t","|",row[8],"\t","|",row[9],"\t","|",row[10])
 # conn.close()
 def groupby():
-    cursor = conn.execute("SELECT * from HOSPITAL group by STATE")
+    cursor = conn.execute("SELECT * from HOSPITAL group by COUNTRY")
     for row in cursor:
         # print(row[0], row[1], row[2], row[3], row[4], row[5], row[6],row[7],row[8],row[9],row[10])
         conn.execute(f"create table if not exists {row[7]} AS SELECT * FROM HOSPITAL where COUNTRY='{row[7]}'")
