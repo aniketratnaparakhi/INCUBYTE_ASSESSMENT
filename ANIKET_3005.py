@@ -1,6 +1,6 @@
 import sqlite3
 # I USED DB BROWSER FOR CONNECTING AND STORING DATA
-conn = sqlite3.connect('NEWTest2.db')
+conn = sqlite3.connect('NEWTEST2.db')
 
 print(conn)
 
@@ -78,8 +78,7 @@ def groupby():
         # print(f"{row[7]} Table Created")
 
 
-# create()
-
+create()
 choice()
 show()
 groupby()
