@@ -7,7 +7,7 @@ Frist I create the connectivity of database using sqlite.connect
 
 Then I create the hospital table using Create(),
 Then Insert Some Data Into The Table Using Insert() function
-After That I Create GroupBy Function For Seperating State And Create Table
+After That I Create GroupBy Function For Seperating Country And Create Table
 Using GroupBy Clause In SQL And Assign Each State to Seperate Table
 
 # Here Some Screenshot
