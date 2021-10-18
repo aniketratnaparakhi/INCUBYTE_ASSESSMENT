@@ -1,6 +1,6 @@
 import sqlite3
 # I USED DB BROWSER FOR CONNECTING AND STORING DATA
-conn = sqlite3.connect('NEW77.db')
+conn = sqlite3.connect('NEWTest2.db')
 
 print(conn)
 
